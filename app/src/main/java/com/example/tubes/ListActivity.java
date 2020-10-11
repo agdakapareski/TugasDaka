@@ -21,12 +21,12 @@ public class ListActivity extends AppCompatActivity {
 
         ArrayList<Tshirt> ListTshirt;
 
-        //get data mahasiswa
-        ListTshirt = new TshirtList().tshirts;
+        //get data tshirt
+        tshirts = new TshirtList().tshirts;
 
         //recycler view
         gridView = findViewById(R.id.gridview);
-        adapter = new TshirtViewAdapter(ListActivity.this, ListTshirt);
+        adapter = new TshirtViewAdapter(ListActivity.this, tshirts);
         gridView.setAdapter(adapter);
     }
 }

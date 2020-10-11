@@ -51,17 +51,17 @@ public class TshirtViewAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(tshirt_view_adapter,null);
         }
 
-        final TextView namaItem = (TextView)convertView.findViewById(R.id.viewNamaItem);
-        final TextView detail = (TextView)convertView.findViewById(R.id.viewDetail);
-        final TextView ukuran = (TextView)convertView.findViewById(R.id.viewUkuran);
-        final TextView harga = (TextView)convertView.findViewById(R.id.viewHarga);
-        final ImageView fotoItem = (ImageView)convertView.findViewById(R.id.viewFotoItem);
+        TextView namaItem = (TextView)convertView.findViewById(R.id.viewNamaItem);
+        TextView detail = (TextView)convertView.findViewById(R.id.viewDetail);
+        TextView ukuran = (TextView)convertView.findViewById(R.id.viewUkuran);
+        TextView harga = (TextView)convertView.findViewById(R.id.viewHarga);
+        ImageView fotoItem = (ImageView)convertView.findViewById(R.id.viewFotoItem);
 
         namaItem.setText(tshirt.getNamaItem());
         detail.setText(tshirt.getDetail());
         ukuran.setText(tshirt.getUkuran());
-        harga.setText(tshirt.getHarga());
-        Picasso.with(context).load(tshirt.getFotoItem()).into(fotoItem);
+        harga.setText(String.valueOf(tshirt.getHarga()));
+        fotoItem.setImageResource(tshirt.getFotoItem());
         return convertView;
     }
 }

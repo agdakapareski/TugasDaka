@@ -6,9 +6,9 @@ public class Tshirt {
     public String detail;
     public String ukuran;
     public int harga;
-    public String fotoItem;
+    public int fotoItem;
 
-    public Tshirt(String namaItem, String detail, String ukuran, int harga, String fotoItem) {
+    public Tshirt(String namaItem, String detail, String ukuran, int harga, int fotoItem) {
         this.namaItem = namaItem;
         this.detail = detail;
         this.ukuran = ukuran;
@@ -48,11 +48,11 @@ public class Tshirt {
         this.harga = harga;
     }
 
-    public String getFotoItem() {
+    public int getFotoItem() {
         return fotoItem;
     }
 
-    public void setFotoItem(String fotoItem) {
+    public void setFotoItem(int fotoItem) {
         this.fotoItem = fotoItem;
     }
 }
